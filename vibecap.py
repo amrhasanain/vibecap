@@ -1,17 +1,20 @@
 import argparse
 import tempfile
+import os
 from pathlib import Path
 from rich.console import Console  # type: ignore[import-not-found]
 from rich.prompt import Prompt # type: ignore[import-not-found]
 
-from mkcap_source_code.core.config import get_api_key, save_api_key
-from mkcap_source_code.ui.styles import STYLES, show_styles, BASE
-from mkcap_source_code.ui.banner import ASCII_BANNER
-from mkcap_source_code.core.utils import find_tool, fail, video_size, run
-from mkcap_source_code.core.transcriber import extract_audio, transcribe
-from mkcap_source_code.generator.subtitles import make_captions, write_srt, write_ass, fit_chars
+from vibecap_source_code.core.config import get_api_key, save_api_key
+from vibecap_source_code.ui.styles import STYLES, show_styles, BASE
+from vibecap_source_code.ui.banner import ASCII_BANNER
+from vibecap_source_code.core.utils import path_tool, fail, video_size, run
+from vibecap_source_code.core.transcriber import extract_audio, transcribe
+from vibecap_source_code.generator.subtitles import make_captions, write_srt, write_ass, fit_chars
 
 VERSION = "1.0.0"
+
+
 console = Console()
 
 MODELS = {
@@ -31,9 +34,9 @@ def wizard(args):
     return args
 
 def main():
-    ap = argparse.ArgumentParser(prog="mkcap", description="Auto captions with Groq Whisper & FFmpeg.")
+    ap = argparse.ArgumentParser(prog="vibecap", description="Auto captions with Groq Whisper & FFmpeg.")
     ap.add_argument("input", nargs="?", help="video file path")
-    ap.add_argument("-k", "--key", default=None, help="Save Groq API Key (e.g. mkcap -key mykey)")
+    ap.add_argument("-k", "--key", default=None, help="Save Groq API Key (e.g. vibecap -key mykey)")
     ap.add_argument("-l", "--lang", default=None, help="language code (ar, en, ...) or 'auto'")
     ap.add_argument("-s", "--style", default=None, choices=list(STYLES), help="caption style")
     ap.add_argument("-m", "--model", default="turbo", help="turbo | large")
@@ -43,7 +46,7 @@ def main():
     ap.add_argument("--position", choices=["top", "middle", "bottom"], default=None)
     ap.add_argument("--srt-only", action="store_true", help="only create the .srt file")
     ap.add_argument("--list-styles", action="store_true", help="show available styles")
-    ap.add_argument("-v", "--version", action="version", version=f"mkcap {VERSION}")
+    ap.add_argument("-v", "--version", action="version", version=f"VibeCap {VERSION}")
     args = ap.parse_args()
 
     api_key = get_api_key(args.key)
@@ -87,7 +90,8 @@ def main():
     except ImportError:
         fail("Missing package. Run: pip install groq rich")
 
-    ffmpeg, ffprobe = find_tool("ffmpeg"), find_tool("ffprobe")
+    ffmpeg = path_tool("ffmpeg")
+    ffprobe = path_tool("ffprobe")
     client = Groq(api_key=api_key)
 
     with tempfile.TemporaryDirectory() as td:

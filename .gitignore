@@ -1,8 +1,4 @@
-main.build/
-main.dist/
-main.onefile-build/
-mkcap-windows-x64.zip/
-.venv/
-__pycache__/
-+ .vscode
-+ mkcap.exe
+* .mp4
+* .srt
+.venv
+__pycache__

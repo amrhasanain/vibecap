@@ -6,7 +6,7 @@ console = Console()
 CHUNK_SEC = 600
 
 def extract_audio(ffmpeg, video, tmp):
-    run([ffmpeg, "-y", "-i", str(video), "-vn", "-ac", "1", "-ar", "16000",
+    run([ffmpeg, "-y", "-i", str(video), "-map", "0:a:0", "-vn", "-ac", "1", "-ar", "16000",
          "-c:a", "libmp3lame", "-b:a", "48k", "-f", "segment",
          "-segment_time", str(CHUNK_SEC), "-reset_timestamps", "1",
          str(tmp / "part_%03d.mp3")])

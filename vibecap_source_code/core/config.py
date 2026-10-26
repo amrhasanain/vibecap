@@ -2,7 +2,7 @@ import json
 from pathlib import Path
 
 # مسار ملف الـ JSON المحلي
-CONFIG_FILE = Path.home() / ".mkcap" / "config.json"
+CONFIG_FILE = Path.home() / ".VibeCap" / "config.json"
 
 def save_api_key(api_key: str):
     CONFIG_FILE.parent.mkdir(parents=True, exist_ok=True)
