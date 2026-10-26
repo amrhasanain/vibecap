@@ -18,7 +18,16 @@ ffmpeg -version
 ffprobe -version
 ```
 
-## Installation on Windows
+## Fast use
+
+```powershell
+git clone https://github.com/amrhasanain/vibecap
+cd vibecap
+python -m pip install -r requirements.txt
+python vibecap.py
+```
+
+## Installation
 
 ```powershell
 git clone https://github.com/amrhasanain/vibecap
