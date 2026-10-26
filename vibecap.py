@@ -122,7 +122,7 @@ def main():
         with console.status(f"[cyan]🔥 Burning '{style_name}' captions into video...[/cyan]"):
             run([ffmpeg, "-y", "-i", str(video), "-vf", vf,
                  "-c:v", "libx264", "-preset", "medium", "-crf", "18",
-                 "-c:a", "copy", "-movflags", "+faststart", str(out)], cwd=td)
+                 "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", str(out)], cwd=td)
 
     console.print(f"\n[bold green3]🎉 Done! Successfully saved to:[/bold green3] [cyan]{out}[/cyan]\n")
 
