@@ -21,7 +21,7 @@ ffprobe -version
 ## Installation on Windows
 
 ```powershell
-git clone https://github.com/amrhasanian/vibecap
+git clone https://github.com/amrhasanain/vibecap
 cd vibecap
 python -m pip install -r requirements.txt
 ```
