@@ -2,7 +2,7 @@
 
 Auto caption maker ✨. Powered by Groq Whisper for transcription and FFmpeg for audio extraction and caption rendering.
 
-VibeCap is a Python script, not a standalone executable. Run it with `python vibecap.py` from the project folder.
+VibeCap is a Python script, not a standalone executable. Run it with `vibecap` from the project folder.
 
 ## Requirements
 
@@ -18,21 +18,13 @@ ffmpeg -version
 ffprobe -version
 ```
 
-## Fast use
-
-```powershell
-git clone https://github.com/amrhasanain/vibecap
-cd vibecap
-python -m pip install -r requirements.txt
-python vibecap.py
-```
 
 ## Installation
 
 ```powershell
 git clone https://github.com/amrhasanain/vibecap
 cd vibecap
-python -m pip install -r requirements.txt
+python -m pip install -e .
 ```
 
 ## Groq API key
@@ -40,7 +32,7 @@ python -m pip install -r requirements.txt
 On the first run, VibeCap prompts for your Groq API key and saves it locally in your user configuration folder. You can also save it from PowerShell with:
 
 ```powershell
-python vibecap.py --key YOUR_GROQ_API_KEY
+vibecap --key YOUR_GROQ_API_KEY
 ```
 
 ## Usage
@@ -48,31 +40,31 @@ python vibecap.py --key YOUR_GROQ_API_KEY
 Run the script without arguments to open the interactive wizard:
 
 ```powershell
-python vibecap.py
+vibecap
 ```
 
 To see the available command-line options:
 
 ```powershell
-python vibecap.py --help
+vibecap --help
 ```
 
 Caption a video in Arabic with the minimal style:
 
 ```powershell
-python vibecap.py "input.mp4" --lang ar --style minimal --model turbo
+vibecap "input.mp4" --lang ar --style minimal --model turbo
 ```
 
 Create only an SRT subtitle file:
 
 ```powershell
-python vibecap.py "input.mp4" --lang ar --srt-only
+vibecap "input.mp4" --lang ar --srt-only
 ```
 
 Choose a different output path, font, or subtitle position:
 
 ```powershell
-python vibecap.py "input.mp4" --lang en --style classic --output "output.mp4" --font "Arial" --position bottom
+vibecap "input.mp4" --lang en --style classic --output "output.mp4" --font "Arial" --position bottom
 ```
 
 

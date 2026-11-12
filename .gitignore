@@ -2,3 +2,4 @@
 *.srt
 .venv/
 __pycache__/
+vibecap.egg-info/
