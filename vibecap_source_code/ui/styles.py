@@ -57,13 +57,13 @@ STYLES = {
         "bold": True,
         "color": "FFFFFF",
         "highlight": "FFFFFF",
-        "highlight_bg": "FFE600",
+        "highlight_bg": "3B82F6",  # blue background behind the active word
         "outline_c": "000000",
         "outline": 5.0,
         "outline_a": 0,
         "shadow": 1.0,
-        "desc": "Bold white text with a thicker clean black outline and a yellow background behind the active word.",
-    },
+        "desc": "Bold white text with a clean black outline and a blue background behind the active word.",
+},
     "impact": {
         **BASE,
         "font": "Impact",
