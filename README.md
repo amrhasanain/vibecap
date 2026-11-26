@@ -1,6 +1,22 @@
-# VibeCap
 
-Auto caption maker ✨. Powered by Groq Whisper for transcription and FFmpeg for audio extraction and caption rendering.
+<p align="center">
+  <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white" alt="Python"></a>
+  <a href="https://groq.com/"><img src="https://img.shields.io/badge/Groq%20Whisper-F55036?style=flat" alt="Groq Whisper"></a>
+  <a href="https://ffmpeg.org/"><img src="https://img.shields.io/badge/FFmpeg-007808?style=flat&logo=ffmpeg&logoColor=white" alt="FFmpeg"></a>
+  <a href="https://github.com/amrhasanain/vibecap"><img src="https://img.shields.io/badge/Arabic-16A34A?style=flat" alt="Arabic"></a>
+  <a href="https://github.com/amrhasanain/vibecap"><img src="https://img.shields.io/badge/English-2563EB?style=flat" alt="English"></a>
+  <a href="https://github.com/amrhasanain/vibecap"><img src="https://img.shields.io/badge/SRT%20Export-475569?style=flat" alt="SRT Export"></a>
+</p>
+
+
+<h1 align="center">VibeCap</h1>
+
+<p align="center">
+  Auto caption maker ✨. Powered by Groq Whisper for transcription and FFmpeg for audio extraction and caption rendering.
+</p>
+
+
+---
 
 VibeCap is a Python script, not a standalone executable. Run it with `vibecap` from the project folder.
 
