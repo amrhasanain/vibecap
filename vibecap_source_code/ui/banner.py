@@ -5,5 +5,5 @@ __   _(_) |__   ___  ___ __ _ _ __
  \ V /| | |_) |  __/ (_| (_| | |_) |
   \_/ |_|_.__/ \___|\___\__,_| .__/ 
                              |_|    
-[/bold bright_magenta][bold cyan]       ⚡ Auto Captions Generator v2.0.1 ⚡[/bold cyan]
+[/bold bright_magenta][bold cyan]       ⚡ Auto Captions Generator v2.0.2 ⚡[/bold cyan]
 """

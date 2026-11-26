@@ -82,7 +82,7 @@ STYLES = {
     "jabal": {
         **BASE,
         "font": "Cairo ExtraBold",
-        "size": 92,
+        "size": 76,
         "bold": True,
         "color": "FFFFFF",
         "highlight": "FFFF00",

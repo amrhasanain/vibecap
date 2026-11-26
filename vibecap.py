@@ -12,7 +12,7 @@ from vibecap_source_code.core.utils import path_tool, fail, video_size, run
 from vibecap_source_code.core.transcriber import extract_audio, transcribe
 from vibecap_source_code.generator.subtitles import make_captions, write_srt, write_ass, fit_chars
 
-VERSION = "2.0.1"
+VERSION = "2.0.2"
 
 
 console = Console()
