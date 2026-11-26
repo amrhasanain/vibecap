@@ -4,13 +4,15 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "vibecap"
-version = "1.0.0"
+version = "2.0.1"
 description = "Automatic video captions using Groq Whisper and FFmpeg"
 requires-python = ">=3.10"
 dependencies = [
     "groq",
     "rich",
 ]
+readme = "README.md"
+
 
 [project.scripts]
 vibecap = "vibecap:main"

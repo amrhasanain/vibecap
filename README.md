@@ -20,12 +20,19 @@ ffprobe -version
 
 
 ## Installation
-
+### With git:
 ```powershell
 git clone https://github.com/amrhasanain/vibecap
 cd vibecap
 python -m pip install -e .
 ```
+
+### With pip:
+
+```powershell
+python -m pip install vibecap
+```
+
 
 ## Groq API key
 
