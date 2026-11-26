@@ -1,5 +1,6 @@
 *.mp4
 *.srt
 .venv/
+dist/
 __pycache__/
 vibecap.egg-info/
