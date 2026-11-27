@@ -18,12 +18,11 @@
 
 ---
 
-VibeCap is a Python script, not a standalone executable. Run it with `vibecap` from the project folder.
+VibeCap is a Python Package, not a standalone executable.
 
 ## Requirements
 
 - `Python 3`
-- `Git` to clone the repository, or you can use `pip` instead
 - A Groq API key
 - A recent FFmpeg installation with both `ffmpeg` and `ffprobe` available on `PATH`
 
@@ -36,12 +35,6 @@ ffprobe -version
 
 
 ## Installation
-### With git:
-```powershell
-git clone https://github.com/amrhasanain/vibecap
-cd vibecap
-python -m pip install -e .
-```
 
 ### With pip:
 
